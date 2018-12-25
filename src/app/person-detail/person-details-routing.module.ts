@@ -4,7 +4,7 @@ import {RouterModule} from '@angular/router';
 
 const routes = [
   {
-    path: 'people/persondetail',
+    path: 'people/:personId',
     component: PersonDetailComponent
   }
 ];
