@@ -1,40 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import {Route, RouterModule} from '@angular/router';
-
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { NotfoundComponent } from './notfound/notfound.component';
-import { PersonDetailComponent } from './person-detail/person-detail.component';
-import {ContactListComponent} from './contact-list/contact-list.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
 
-
-const routes: Route[] = [
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'about',
-    component : AboutComponent
-  },
-  {
-    path: '**',
-    component: NotfoundComponent
-  },
-  {
-    path: 'people/persondetail',
-    component: PersonDetailComponent
-  },
-  {
-    path: 'contacts/list',
-    component: ContactListComponent
-  }
-]
-
+import {AppComponent} from './app.component';
+import {HomeComponent} from './home/home.component';
+import {AboutComponent} from './about/about.component';
+import {NotfoundComponent} from './notfound/notfound.component';
+import {AppRoutingModule} from './app-routing.module';
+import {PersonDetailModule} from './person-detail/person-detail.module';
 
 
 @NgModule({
@@ -42,11 +15,13 @@ const routes: Route[] = [
     AppComponent,
     HomeComponent,
     AboutComponent,
-    NotfoundComponent,
-    PersonDetailComponent
+    NotfoundComponent
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routes)],
+  imports: [BrowserModule, PersonDetailModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+
+export class AppModule {
+}
