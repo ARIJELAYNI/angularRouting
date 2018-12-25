@@ -6,9 +6,9 @@
 </div>
 
 <nav>
-  <a [routerLink]="['/home']">home</a>
-  <a href="about">about</a>
-  <a href="contacts/list">contacts</a>
+  <a [routerLink]="['/home']" routerLinkActive="active-route">home</a>
+  <a [routerLink]="['/about']" routerLinkActive="active-route">about</a>
+  <a [routerLink]="['/contacts', 'list']" routerLinkActive="active-route">contacts</a>
 </nav>
 <router-outlet></router-outlet>
 
