@@ -8,6 +8,7 @@ import {AboutComponent} from './about/about.component';
 import {NotfoundComponent} from './notfound/notfound.component';
 import {AppRoutingModule} from './app-routing.module';
 import {PersonDetailModule} from './person-detail/person-detail.module';
+import {ContactListModule} from './contact-list/contact-list.module';
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import {PersonDetailModule} from './person-detail/person-detail.module';
     AboutComponent,
     NotfoundComponent
   ],
-  imports: [BrowserModule, PersonDetailModule, AppRoutingModule],
+  imports: [BrowserModule, PersonDetailModule, ContactListModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })

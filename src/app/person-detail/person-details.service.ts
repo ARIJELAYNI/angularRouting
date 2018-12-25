@@ -21,6 +21,6 @@ export class PersonDetailsService {
   }
 
   getPersonById(personId: number) {
-    return of(this.person.filter(x => x.id == +personId));
+    return of(this.person.filter(x => x.id == personId));
   }
 }
